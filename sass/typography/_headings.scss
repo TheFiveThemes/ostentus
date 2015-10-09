@@ -1,8 +1,8 @@
 %heading-base {
     font-family: $font__headings;
     font-size: ms(0);
+    font-weight: 100;
     clear: both;
-    text-transform: uppercase;
     line-height: 1;
     color: $color__headings;
     @include respondTo(upto-narrow) {
@@ -36,7 +36,9 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     h3 {
-        font-size: ms(2);
+        font-size: ms(1);
+        font-weight: 300;
+        text-transform: uppercase;
         letter-spacing: ms(-15);
         @include respondTo(upto-narrow) {
             font-size: ms(1);
@@ -44,24 +46,23 @@ h1, h2, h3, h4, h5, h6 {
     }
     h4 {
         font-size: ms(0);
+        font-weight: 300;
+        text-transform: uppercase;
         letter-spacing: ms(-12);
     }
 
     h5 {
         font-size: ms(-1);
+        font-weight: 300;
+        text-transform: uppercase;
         letter-spacing: ms(-12);
     }
 
     h6 {
         font-size: ms(-2);
+        font-weight: 300;
+        text-transform: uppercase;
         letter-spacing: ms(-10);
-    }
-
-
-    @include respondTo(atleast-wide) {
-        h1, h2 {
-            @include transition(font-size 0.2s ease-in-out);
-        }
     }
 }
 

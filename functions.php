@@ -41,10 +41,13 @@ function ostentus_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 300, 300, true );
+    add_image_size( 'ostentus-large', 1500, 1000, true  );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'ostentus' ),
+		'social'  => __( 'Social Links', 'ostentus' ),
 	) );
 
 	/*
@@ -111,9 +114,63 @@ function ostentus_widgets_init() {
 add_action( 'widgets_init', 'ostentus_widgets_init' );
 
 /**
+ * Google Fonts
+ * Gives translators ability to deactivate fonts that don't include their language's characters.
+ * @since Ostentus 1.0
+ */
+function ostentus_fonts_url() {
+    $fonts_url = '';
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Roboto Slab, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'ostentus' );
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Roboto, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto = _x( 'on', 'Roboto font: on or off', 'ostentus' );
+
+    /* Translators: If there are characters in your language that are not
+    * supported by Roboto Mono, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto_mono = _x( 'on', 'Roboto Mono font: on or off', 'ostentus' );
+ 
+    if ( 'off' !== $roboto_slab || 'off' !== $roboto || 'off' !== $roboto_mono ) {
+        $font_families = array();
+ 
+        if ( 'off' !== $roboto_slab ) {
+            $font_families[] = 'Roboto+Slab:100,300';
+        }
+ 
+        if ( 'off' !== $roboto ) {
+            $font_families[] = 'Roboto:300,500,300italic,500italic';
+        }
+
+        if ( 'off' !== $roboto_mono ) {
+            $font_families[] = 'Roboto+Mono:400';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function ostentus_scripts() {
+	wp_enqueue_style( 'ostentus-fonts', ostentus_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'ostentus-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ostentus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

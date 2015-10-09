@@ -1,36 +1,27 @@
 .site-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: ms(0) ms(0) ms(1);
-    margin-bottom: 0;
-    background: $color__background-header;
-
-    .featured-image &,
-    .header-image &,
-    .blog.home &,
-    .error404 & {
-        position: absolute;
-        background: transparent;
-        margin-bottom: 0;
+    padding: ms(2);
+    @include respondTo(atleast-wide) {
+        width: 25vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: ms(6) ms(2);
+        margin: ms(2) 0;
+    }
+    @include respondTo(atleast-extra-wide) {
+        margin: ms(8) 0;
     }
 }
 
 .site-branding {
     @include animation(fadein 0.3s ease-out 1s backwards);
-
-    position: relative;
-    width: 30%;
-    float: left;
     color: #fff;
-    z-index: 9000;
 
     @include transition(all 0.5s ease-in-out);
 
     h1 {
-        font-size: ms(-2);
-        letter-spacing: ms(-10);
+        font-size: ms(4);
+        font-weight: 100;
         margin: 0 0 ms(-4);
         a {
             color: $color__headerlink;
@@ -40,11 +31,14 @@
                 //text-decoration: underline;
             }
         }
+        @include respondTo(atleast-extra-wide) {
+            font-size: ms(5);
+        }
     }
     h2 {
         font-family: $font__main;
         font-size: ms(-2);
-        font-weight: 400;
+        font-weight: 300;
         font-style: italic;
         text-transform: none;
         letter-spacing: ms(-12);
@@ -53,12 +47,6 @@
     }
 
     @include respondTo(upto-medium) {
-        width: 80%;
-        @include transition(all 0.5s ease-in-out);
-    }
-
-    .sidebar-toggled & {
-        width: 100%;
         @include transition(all 0.5s ease-in-out);
     }
 }

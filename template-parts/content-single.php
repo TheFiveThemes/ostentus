@@ -10,6 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if ( has_post_thumbnail() ) :
+			$image_id = get_post_thumbnail_id();
+			$url = wp_get_attachment_image_src( $image_id, 'ostentus-large' );
+		?>
+		<figure class="entry-image">
+			<img src="<?php echo esc_attr( $url[0] ); ?>">
+		</figure><!-- .section-image -->
+	<?php endif; ?>
+
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

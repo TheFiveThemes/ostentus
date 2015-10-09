@@ -3,9 +3,7 @@ form {
 	input[type="button"],
 	input[type="reset"],
 	input[type="submit"] {
-		@extend %heading-base;
-		font-size: ms(-2);
-		letter-spacing: ms(-10);
+		@include text-format(heading-small);
 		color: $color__text-button;
 		text-shadow: 0 0 0 transparent;
 

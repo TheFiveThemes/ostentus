@@ -40,10 +40,18 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-image {
+    margin-top: -(ms(6));
+    margin-right: -(ms(6));
+    margin-bottom: ms(4);
+    margin-left: -(ms(6));
+}
+
 .entry-header {
     .entry-title {
         -ms-word-wrap: break-word;
         word-wrap: break-word;
+        margin-top: 0;
         margin-bottom: ms(-6);
         a {
             text-decoration: none;

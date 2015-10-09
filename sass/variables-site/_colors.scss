@@ -2,7 +2,7 @@
 // Colors
 //
 
-$color__base: #141532;
+$color__base: #000A1E;
 
 $color__base-tint10: tint($color__base,10%);
 $color__base-tint15: tint($color__base,15%);
@@ -19,7 +19,7 @@ $color__base-shade10: shade($color__base,10%);
 $color__base-shade20: shade($color__base,20%);
 
 
-$color__accent: #eb6e78;
+$color__accent: #50B496;
 
 $color__accent-tint10: tint($color__accent,10%);
 $color__accent-tint20: tint($color__accent,20%);
@@ -43,15 +43,15 @@ $color__accent-shade70: shade($color__accent,70%);
 
 // Backgrounds
 
-$color__background-body: #fff;
+$color__background-body: $color__base-tint60;
 $color__background-screen: $color__base-tint95;
 $color__background-hr: $color__base-tint95;
 $color__background-pre: $color__base-tint95;
 $color__background-ins: #fff9c0;
 
-$color__background-header: $color__base-tint15;
+$color__background-content: #fff;
 $color__background-archive-header: $color__base-tint90;
-$color__background-feature: $color__base-shade20;
+$color__background-feature: $color__base-tint40;
 $color__background-drawer: $color__base-tint95;
 $color__background-footer: $color__base-tint95;
 $color__background-404: $color__accent;
@@ -126,3 +126,4 @@ $color__border-abbr: $color__base-tint60;
 // Others
 $color__border-base: $color__base-tint95;
 $color__border-sidebar-navigation: $color__base-tint80;
+$color__boxshadow-content: $color__base-tint40;
