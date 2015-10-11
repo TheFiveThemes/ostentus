@@ -22,7 +22,7 @@
 }
 
 .site-branding {
-    @include animation(fadein 0.3s ease-out 1s backwards);
+    @include animation(fadein 1s ease-out 0s backwards);
     color: #fff;
 
     @include transition(all 0.5s ease-in-out);

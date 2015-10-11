@@ -16,16 +16,51 @@
 
     .site-main {        
         overflow: hidden;
+        width: 100vw;
+        @include respondTo(atleast-wide) {
+            width: 75vw;
+        }
+        @include respondTo(atleast-ultra-wide) {
+            width: 80vw;
+        }
     }
 
     article {
-        @include animation(fadein 2s ease-out backwards);
+        @include animation(fadein 1s ease-out 0.37s backwards);
         position: relative;
         width: 50vw;
         height: 50vw;
         float: left;
         margin: 0;
         border-width: 0;
+
+        &:nth-child(1) {
+            @include animation(fadein 1s ease-out 0.01s backwards);
+        }
+        &:nth-child(2) {
+            @include animation(fadein 1s ease-out 0.05s backwards);
+        }
+        &:nth-child(3) {
+            @include animation(fadein 1s ease-out 0.09s backwards);
+        }
+        &:nth-child(4) {
+            @include animation(fadein 1s ease-out 0.13s backwards);
+        }
+        &:nth-child(5) {
+            @include animation(fadein 1s ease-out 0.17s backwards);
+        }
+        &:nth-child(6) {
+            @include animation(fadein 1s ease-out 0.21s backwards);
+        }
+        &:nth-child(7) {
+            @include animation(fadein 1s ease-out 0.25s backwards);
+        }
+        &:nth-child(8) {
+            @include animation(fadein 1s ease-out 0.29s backwards);
+        }
+        &:nth-child(9) {
+            @include animation(fadein 1s ease-out 0.33s backwards);
+        }
 
         @include respondTo(atleast-narrow) {
             width: 33.333vw;
@@ -46,32 +81,57 @@
         &:nth-child(even) {
             background: rgba($color__background-feature,.6);
         }
+        @include transition(background, 0.5s, ease-in-out);
 
         &:hover {
             background-color: $color__accent;
+            @include transition(background, 0.05s, ease-in-out);
             .section-image {
                 opacity: 0.2;
+                @include transition(opacity, 0.05s, ease-in-out);
             }
+            .section-inner {
+                opacity: 1;
+                @include transition(opacity, 0.8s, ease-in-out);
+            }
+        }
+
+        .entry-permalink {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
         }
 
         .section-image {
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0.5;
+            opacity: 0.9;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            @include transition(opacity, 0.5s, ease-in-out);
+        }
+
+        &.has-post-thumbnail {
+            .section-inner {
+                opacity: 0;
+            }
+            &:hover .section-inner  {
+                opacity: 1;
+            }
         }
 
         .section-inner {
+            opacity: 1;
             position: absolute;
             top: 50%;
             @include transform(translateY(-50%));
             width: 100%;
             @include transition(width 0.4s ease-in-out);
-            @include respondTo(atleast-medium) {
-            }
+            @include transition(opacity, 0.5s, ease-in-out);
         }
 
         .entry-header {
@@ -87,13 +147,9 @@
                 a {
                     text-decoration: none;
                     color: white;
-                    &:hover {
-                        color: $color__titlelink-hover;
-                    }
                 }
             }
         }
-
     }
 
     .posts-navigation {
