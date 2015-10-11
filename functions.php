@@ -143,7 +143,7 @@ function ostentus_fonts_url() {
         $font_families = array();
  
         if ( 'off' !== $roboto_slab ) {
-            $font_families[] = 'Roboto+Slab:100,300';
+            $font_families[] = 'Roboto Slab:100,300';
         }
  
         if ( 'off' !== $roboto ) {
@@ -151,7 +151,7 @@ function ostentus_fonts_url() {
         }
 
         if ( 'off' !== $roboto_mono ) {
-            $font_families[] = 'Roboto+Mono:400';
+            $font_families[] = 'Roboto Mono:400';
         }
  
         $query_args = array(

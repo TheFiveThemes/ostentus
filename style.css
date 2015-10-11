@@ -1053,18 +1053,22 @@ blockquote.alignright {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1.5em; }
+  padding: 2.25em;
+  text-align: center; }
   @media (min-width: 1100px) {
     .site-header {
       width: 25vw;
+      max-width: 17.0859375em;
       position: fixed;
       top: 0;
       left: 0;
-      padding: 3.375em 1.5em;
-      margin: 1.5em 0; } }
+      padding: 1.5em;
+      margin: 1.5em 0;
+      text-align: left; } }
   @media (min-width: 1400px) {
     .site-header {
-      margin: 5.0625em 0; } }
+      margin: 2.25em 0;
+      padding: 2.25em; } }
   @media (min-width: 1600px) {
     .site-header {
       width: 20vw; } }
@@ -1086,9 +1090,6 @@ blockquote.alignright {
       text-decoration: none; }
       .site-branding h1 a:hover {
         color: #fff; }
-    @media (min-width: 1400px) {
-      .site-branding h1 {
-        font-size: 2.25em; } }
   .site-branding h2 {
     font-family: "Roboto", sans-serif;
     font-size: 0.6666666667em;
@@ -1164,10 +1165,14 @@ blockquote.alignright {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .1; }
+    opacity: .15; }
 
 .site-content {
   width: 100vw; }
+  @media (min-width: 480px) {
+    .site-content {
+      width: 90vw;
+      margin: 0 auto; } }
   @media (min-width: 1100px) {
     .site-content {
       width: 75vw;
@@ -1180,7 +1185,7 @@ blockquote.alignright {
 .content-area {
   max-width: 38.443359375em;
   padding: 1.5em;
-  margin: 1.5em auto;
+  margin: 0 auto;
   background: #fff;
   box-shadow: 0 2px 1px rgba(102, 108, 120, 0.3); }
   @media (min-width: 1100px) {
@@ -1189,8 +1194,8 @@ blockquote.alignright {
       margin: 1.5em 1.5em 5.0625em 0; } }
   @media (min-width: 1400px) {
     .content-area {
-      margin-top: 5.0625em;
-      margin-right: 5.0625em;
+      margin-top: 2.25em;
+      margin-right: 2.25em;
       padding: 5.0625em; } }
   @media (min-width: 1400px) {
     .content-area {
@@ -1292,6 +1297,9 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Home
 --------------------------------------------------------------*/
+.home .site-content {
+  width: 100vw; }
+
 .home .site-main {
   overflow: hidden; }
 
@@ -1305,6 +1313,10 @@ blockquote.alignright {
   margin: 0;
   border-width: 0;
   background: rgba(77, 84, 98, 0.8); }
+  @media (min-width: 480px) {
+    .home article {
+      width: 33.333vw;
+      height: 33.333vw; } }
   @media (min-width: 800px) {
     .home article {
       width: 25vw;

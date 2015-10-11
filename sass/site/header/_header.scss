@@ -1,18 +1,23 @@
 .site-header {
-    padding: ms(2);
+    padding: ms(4);
+    text-align: center;
     @include respondTo(atleast-wide) {
         width: 25vw;
+        max-width: ms(14);
         position: fixed;
         top: 0;
         left: 0;
-        padding: ms(6) ms(2);
+        padding: ms(2);
         margin: ms(2) 0;
+        text-align: left;
     }
     @include respondTo(atleast-extra-wide) {
-        margin: ms(8) 0;
+        margin: ms(4) 0;
+        padding: ms(4);
     }
     @include respondTo(atleast-ultra-wide) {
         width: 20vw;
+
     }
 }
 
@@ -36,9 +41,7 @@
                 //text-decoration: underline;
             }
         }
-        @include respondTo(atleast-extra-wide) {
-            font-size: ms(4);
-        }
+
     }
     h2 {
         font-family: $font__main;

@@ -45,12 +45,14 @@
     margin-right: -(ms(2));
     margin-bottom: ms(4);
     margin-left: -(ms(2));
+
     @include respondTo(atleast-wide) {
         margin-top: -(ms(6));
         margin-right: -(ms(6));
         margin-bottom: ms(4);
         margin-left: -(ms(6));
     }
+    
     @include respondTo(atleast-extra-wide) {
         margin-top: -(ms(8));
         margin-right: -(ms(8));

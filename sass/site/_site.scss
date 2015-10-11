@@ -20,12 +20,16 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: .1;
+        opacity: .15;
     }
 }
 
 .site-content {
     width: 100vw;
+    @include respondTo(atleast-narrow) {
+        width: 90vw;
+        margin: 0 auto;
+    }
     @include respondTo(atleast-wide) {
         width: 75vw;
         margin-left: 25vw; 
@@ -39,7 +43,7 @@
 .content-area {
     max-width: ms(18);
     padding: ms(2);
-    margin: ms(2) auto;
+    margin: 0 auto;
     background: $color__background-content;
     box-shadow: 0 2px 1px rgba($color__boxshadow-content,.3);
     
@@ -48,8 +52,8 @@
         margin: ms(2) ms(2) ms(8) 0;
     }
     @include respondTo(atleast-extra-wide) {
-        margin-top: ms(8);
-        margin-right: ms(8);
+        margin-top: ms(4);
+        margin-right: ms(4);
         padding: ms(8);
     }
     

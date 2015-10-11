@@ -1,5 +1,19 @@
 .home {
 
+    // .site-header {
+    //     height: 100vw;
+    //     @include respondTo(atleast-narrow) {
+    //         height: 33.333vw;
+    //     }
+    //     @include respondTo(atleast-medium) {
+    //         height: auto;
+    //     }
+    // }
+
+    .site-content {
+        width: 100vw;
+    }
+
     .site-main {        
         overflow: hidden;
     }
@@ -12,6 +26,11 @@
         float: left;
         margin: 0;
         border-width: 0;
+
+        @include respondTo(atleast-narrow) {
+            width: 33.333vw;
+            height: 33.333vw;
+        }
 
         @include respondTo(atleast-medium) {
             width: 25vw;
