@@ -11,6 +11,17 @@
 .site {
     width: 100vw;
     @include clearfix;
+    &:before {
+        z-index: -1;
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .1;
+    }
 }
 
 .site-content {
@@ -19,13 +30,19 @@
         width: 75vw;
         margin-left: 25vw; 
     }
+    @include respondTo(atleast-ultra-wide) {
+        width: 80vw;
+        margin-left: 20vw; 
+    }
 }
 
 .content-area {
-    background: $color__background-content;
-    box-shadow: 0 2px 1px rgba($color__boxshadow-content,.3);
+    max-width: ms(18);
     padding: ms(2);
     margin: ms(2) auto;
+    background: $color__background-content;
+    box-shadow: 0 2px 1px rgba($color__boxshadow-content,.3);
+    
     @include respondTo(atleast-wide) {
         padding: ms(6);
         margin: ms(2) ms(2) ms(8) 0;
@@ -33,16 +50,15 @@
     @include respondTo(atleast-extra-wide) {
         margin-top: ms(8);
         margin-right: ms(8);
-        max-width: ms(20);
         padding: ms(8);
     }
     
     .site-main {
-        max-width: ms(18);
-        margin: 0 auto;
-        @include respondTo(atleast-extra-wide) {
-            font-size: ms(1);
-        }
+        
+    }
+
+    @include respondTo(atleast-extra-wide) {
+        font-size: ms(1);
     }
 }
 

@@ -10,13 +10,7 @@
 		$image_id = get_post_thumbnail_id();
 		$url = wp_get_attachment_image_src( $image_id, 'ostentus-large' );
 	?>
-
-	<div class="section-image" style="background-image: url(<?php echo esc_attr( $url[0] ); ?>);">
-	</div><!-- .section-image -->
-	<?php else: ?>
-
-	<div class="section-image"></div><!-- .section-image -->
-
+	<div class="section-image" style="background-image: url(<?php echo esc_attr( $url[0] ); ?>);"></div><!-- .section-image -->
 	<?php endif; ?>
 	
 	<div class="section-inner">

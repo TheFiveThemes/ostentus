@@ -18,6 +18,17 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+<?php if ( is_singular() && has_post_thumbnail( $post->ID ) ) :
+        $image_id = get_post_thumbnail_id();
+        $url = wp_get_attachment_image_src( $image_id, 'ostentus-large' );
+    ?>
+    <style type="text/css">
+        .site:before {
+            background-image: url(<?php echo esc_attr( $url[0] ); ?>);
+        }
+    </style>
+<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>

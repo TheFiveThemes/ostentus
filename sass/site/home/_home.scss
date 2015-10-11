@@ -1,21 +1,38 @@
 .home {
 
-    .site-content {
-        @include clearfix;
+    .site-main {        
+        overflow: hidden;
     }
 
     article {
         @include animation(fadein 2s ease-out backwards);
         position: relative;
-        width: 25vw;
-        height: 25vw;
+        width: 50vw;
+        height: 50vw;
         float: left;
         margin: 0;
-        border-bottom: 0;
+        border-width: 0;
+
+        @include respondTo(atleast-medium) {
+            width: 25vw;
+            height: 25vw;
+        }
+
+        @include respondTo(atleast-ultra-wide) {
+            width: 20vw;
+            height: 20vw;
+        }
 
         background: rgba($color__background-feature,.8);
         &:nth-child(even) {
             background: rgba($color__background-feature,.6);
+        }
+
+        &:hover {
+            background-color: $color__accent;
+            .section-image {
+                opacity: 0.2;
+            }
         }
 
         .section-image {
@@ -23,7 +40,6 @@
             width: 100%;
             height: 100%;
             opacity: 0.5;
-            //@include animation(fadein-images 1s ease-out backwards, image-pulse 15.0s ease-in-out infinite alternate);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

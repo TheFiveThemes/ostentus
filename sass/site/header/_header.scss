@@ -11,6 +11,9 @@
     @include respondTo(atleast-extra-wide) {
         margin: ms(8) 0;
     }
+    @include respondTo(atleast-ultra-wide) {
+        width: 20vw;
+    }
 }
 
 .site-branding {
@@ -20,8 +23,10 @@
     @include transition(all 0.5s ease-in-out);
 
     h1 {
-        font-size: ms(4);
+        font-size: ms(2);
         font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: ms(-15);
         margin: 0 0 ms(-4);
         a {
             color: $color__headerlink;
@@ -32,7 +37,7 @@
             }
         }
         @include respondTo(atleast-extra-wide) {
-            font-size: ms(5);
+            font-size: ms(4);
         }
     }
     h2 {

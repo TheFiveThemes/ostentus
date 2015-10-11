@@ -19,6 +19,8 @@ $color__base-shade10: shade($color__base,10%);
 $color__base-shade20: shade($color__base,20%);
 
 
+
+
 $color__accent: #50B496;
 
 $color__accent-tint10: tint($color__accent,10%);
@@ -35,6 +37,10 @@ $color__accent-shade40: shade($color__accent,40%);
 $color__accent-shade60: shade($color__accent,60%);
 $color__accent-shade70: shade($color__accent,70%);
 
+// Mixes
+$color__accent-mix10: mix($color__base, $color__accent, 10%);
+$color__accent-mix20: mix($color__base, $color__accent, 20%);
+$color__accent-mix30: mix($color__base, $color__accent, 30%);
 
 
 //
@@ -43,7 +49,7 @@ $color__accent-shade70: shade($color__accent,70%);
 
 // Backgrounds
 
-$color__background-body: $color__base-tint60;
+$color__background-body: $color__base-tint40;
 $color__background-screen: $color__base-tint95;
 $color__background-hr: $color__base-tint95;
 $color__background-pre: $color__base-tint95;
@@ -51,7 +57,7 @@ $color__background-ins: #fff9c0;
 
 $color__background-content: #fff;
 $color__background-archive-header: $color__base-tint90;
-$color__background-feature: $color__base-tint40;
+$color__background-feature: $color__base-tint30;
 $color__background-drawer: $color__base-tint95;
 $color__background-footer: $color__base-tint95;
 $color__background-404: $color__accent;
