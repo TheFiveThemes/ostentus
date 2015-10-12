@@ -45,36 +45,36 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+        <?php if ( has_nav_menu( 'primary' ) ) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ostentus' ); ?></button>
 
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-            <nav class="main-navigation widget" role="navigation">
-                <h2 class="menu-heading widget-title"><?php _e( 'Navigation', 'magnus' ); ?></h2>
-                <?php
-                    // Primary navigation menu.
-                    wp_nav_menu( array(
-                        'menu_class'     => 'nav-menu',
-                        'theme_location' => 'primary',
-                    ) );
-                ?>
-            </nav><!-- .main-navigation -->
-	        <?php endif; ?>
-
-	        <?php if ( has_nav_menu( 'social' ) ) : ?>
-	            <nav id="social-navigation widget" class="social-navigation" role="navigation">
-	                <?php
-	                    // Social links navigation menu.
-	                    wp_nav_menu( array(
-	                        'theme_location' => 'social',
-	                        'depth'          => 1,
-	                        'link_before'    => '<span class="screen-reader-text">',
-	                        'link_after'     => '</span>',
-	                    ) );
-	                ?>
-	            </nav><!-- .social-navigation -->
-	        <?php endif; ?>
+            <h2 class="menu-heading"><?php _e( 'Navigation', 'magnus' ); ?></h2>
+            <?php
+                // Primary navigation menu.
+                wp_nav_menu( array(
+                    'menu_class'     => 'nav-menu',
+                    'menu_id' => 'primary-menu',
+                    'theme_location' => 'primary',
+                ) );
+            ?>
 		</nav><!-- #site-navigation -->
+        <?php endif; ?>
+
+        <?php if ( has_nav_menu( 'social' ) ) : ?>
+            <nav id="social-navigation widget" class="social-navigation" role="navigation">
+            <?php
+                // Social links navigation menu.
+                wp_nav_menu( array(
+                    'theme_location' => 'social',
+                    'depth'          => 1,
+                    'link_before'    => '<span class="screen-reader-text">',
+                    'link_after'     => '</span>',
+                ) );
+            ?>
+            </nav><!-- .social-navigation -->
+        <?php endif; ?>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

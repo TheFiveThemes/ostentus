@@ -7,9 +7,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: ms(2);
+        padding: 0 ms(2);
         margin: ms(2) 0;
-        text-align: left;
+        //text-align: left;
     }
     @include respondTo(atleast-extra-wide) {
         margin: ms(4) 0;
@@ -22,6 +22,7 @@
 }
 
 .site-branding {
+    padding: ms(2) 0;
     @include animation(fadein 1s ease-out 0s backwards);
     color: #fff;
 

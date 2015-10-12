@@ -33,6 +33,7 @@
         float: left;
         margin: 0;
         border-width: 0;
+        overflow: hidden;
 
         &:nth-child(1) {
             @include animation(fadein 1s ease-out 0.01s backwards);
@@ -84,7 +85,7 @@
         @include transition(background, 0.5s, ease-in-out);
 
         &:hover {
-            background-color: $color__accent;
+            background-color: $color__background-homeblock-hover;
             @include transition(background, 0.05s, ease-in-out);
             .section-image {
                 opacity: 0.2;

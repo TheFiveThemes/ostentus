@@ -48,6 +48,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     ## Captions
     ## Galleries
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Color Applications
+--------------------------------------------------------------*/
 @-webkit-keyframes image-pulse {
   0% {
     -webkit-transform: scale(1.01); }
@@ -430,22 +436,22 @@ body {
   /* WebKit/Blink Browsers */
   background: #62bca1;
   color: #eef8f5;
-  text-shadow: 0 1px 1px #409078; }
+  text-shadow: 0 1px 1px #40927e; }
 
 ::selection {
   /* WebKit/Blink Browsers */
   background: #62bca1;
   color: #eef8f5;
-  text-shadow: 0 1px 1px #409078; }
+  text-shadow: 0 1px 1px #40927e; }
 
 ::-moz-selection {
   /* Gecko Browsers */
   background: #62bca1;
   color: #eef8f5;
-  text-shadow: 0 1px 1px #409078; }
+  text-shadow: 0 1px 1px #40927e; }
 
 body {
-  background: #666c78;
+  background: #4d5462;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -509,7 +515,7 @@ form input[type="submit"] {
   text-shadow: 0 0 0 transparent;
   border-style: solid;
   border-width: 1px 1px 3px;
-  border-color: #50B496 #48a287 #409078;
+  border-color: #50B496 #40927e #40927e;
   border-radius: 3px;
   background: #50B496;
   padding: 0.8573333333em 1.286em;
@@ -520,17 +526,17 @@ form input[type="submit"] {
   form input[type="reset"]:hover,
   form input[type="submit"]:hover {
     background: #73c3ab;
-    border-color: #73c3ab #62bca1 #48a287;
+    border-color: #73c3ab #62bca1 #48a38a;
     color: #fff;
-    text-shadow: 0 1px 1px #409078;
+    text-shadow: 0 1px 1px #40927e;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out; }
   form button:active,
   form input[type="button"]:active,
   form input[type="reset"]:active,
   form input[type="submit"]:active {
-    background: #48a287;
-    border-color: #409078 #409078 #409078;
+    background: #48a38a;
+    border-color: #40927e #40927e #40927e;
     border-width: 3px 1px 1px; }
   form button:focus,
   form input[type="button"]:focus,
@@ -651,158 +657,12 @@ a {
 /* 
 **  Sidebar Toggle 
 */
-.no-js .sidebar-toggle {
+.no-js .menu-toggle {
   display: none; }
 
-.sidebar-toggle {
-  -webkit-animation: fadein 0.3s ease-out 1s backwards;
-  animation: fadein 0.3s ease-out 1s backwards;
-  display: block;
-  content: "";
-  display: table;
-  box-shadow: 0 0 0 transparent;
-  text-shadow: 0 0 0 transparent;
-  border: 0 none;
-  border-radius: 0;
-  padding: 0;
-  outline: 0;
-  font-size: 1em;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: -1em 0 0;
-  padding: 1.286em 1em 1.5em;
-  z-index: 100; }
-  .sidebar-toggle span, .sidebar-toggle span:before,
-  .sidebar-toggle span:after {
-    display: block;
-    width: 1.5em;
-    height: 3px;
-    border-radius: 1px;
-    line-height: 1;
-    background: rgba(230, 231, 233, 0.7); }
-  .sidebar-toggle span {
-    text-indent: -9999px;
-    -webkit-transition-property: color, background, opacity, width;
-    transition-property: color, background, opacity, width;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out; }
-    .sidebar-toggle span:before,
-    .sidebar-toggle span:after {
-      content: '';
-      position: absolute;
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
-      top: 1.286em;
-      -webkit-transition-property: color, background, opacity, width;
-      transition-property: color, background, opacity, width;
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out; }
-    .sidebar-toggle span:before {
-      margin-top: -8px;
-      width: 1.286em; }
-    .sidebar-toggle span:after {
-      margin-top: 8px;
-      width: 1em; }
-  .sidebar-toggle:hover {
-    background: transparent;
-    box-shadow: 0 0 0 transparent;
-    text-shadow: 0 0 0 transparent;
-    border: 0 none; }
-    .sidebar-toggle:hover span {
-      -webkit-transition-property: color, background, opacity, width;
-      transition-property: color, background, opacity, width;
-      -webkit-transition-duration: 0.15s;
-      transition-duration: 0.15s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out;
-      background: #fff; }
-      .sidebar-toggle:hover span:before,
-      .sidebar-toggle:hover span:after {
-        -webkit-transition-property: color, background, opacity, width;
-        transition-property: color, background, opacity, width;
-        -webkit-transition-duration: 0.15s;
-        transition-duration: 0.15s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        width: 1.5em;
-        background: #fff; }
-  .sidebar-toggle:active,
-  .sidebar-toggle:visited,
-  .sidebar-toggle:focus {
-    box-shadow: 0 0 0 transparent; }
-  .sidebar-toggled .sidebar-toggle {
-    position: fixed;
-    top: 0;
-    margin-top: 0;
-    z-index: 9999;
-    border: 0 none;
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-    -webkit-transition-property: color, background, opacity, -webkit-transform;
-    transition-property: color, background, opacity, transform;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out; }
-    .sidebar-toggled .sidebar-toggle span {
-      background: transparent;
-      -webkit-transition: background 0.2s ease-in-out;
-      transition: background 0.2s ease-in-out; }
-      .sidebar-toggled .sidebar-toggle span:before,
-      .sidebar-toggled .sidebar-toggle span:after {
-        width: 1.5em;
-        margin-top: 0;
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-        transform-origin: center;
-        -webkit-transition-property: color, background, opacity, -webkit-transform;
-        transition-property: color, background, opacity, transform;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-timing-function: ease-in-out;
-        background: #999da5;
-        height: 4px; }
-      .sidebar-toggled .sidebar-toggle span:before {
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
-      .sidebar-toggled .sidebar-toggle span:after {
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-    .sidebar-toggled .sidebar-toggle:hover {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
-      -webkit-transition-property: color, background, opacity, -webkit-transform;
-      transition-property: color, background, opacity, transform;
-      -webkit-transition-duration: 0.15s;
-      transition-duration: 0.15s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out; }
-      .sidebar-toggled .sidebar-toggle:hover span:before,
-      .sidebar-toggled .sidebar-toggle:hover span:after {
-        background: #50B496; }
-  .sidebar-toggled.admin-bar .sidebar-toggle {
-    top: 32px; }
-    @media (max-width: 800px) {
-      .sidebar-toggled.admin-bar .sidebar-toggle {
-        top: 42px; } }
-  .sidebar-closed .sidebar-toggle span {
-    -webkit-animation: fadein 0.3s ease-out 0.4s backwards;
-    animation: fadein 0.3s ease-out 0.4s backwards; }
+@media (min-width: 480px) {
+  .menu-toggle {
+    display: none; } }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -812,79 +672,8 @@ a {
   margin: 0;
   list-style: none; }
 
-.site-header .header-navigation {
-  position: absolute;
-  display: block;
-  right: 0;
-  width: 70%;
-  text-align: right;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1316872428em;
-  line-height: 1;
-  opacity: 1; }
-  @media (max-width: 800px) {
-    .site-header .header-navigation {
-      width: 20%; } }
-  .site-header .header-navigation a {
-    display: block;
-    width: 100%;
-    font-size: 0.6666666667em;
-    letter-spacing: 0.1316872428em;
-    color: rgba(230, 231, 233, 0.7);
-    text-decoration: none; }
-    .site-header .header-navigation a:hover {
-      color: #fff; }
-  .site-header .header-navigation .menu-header-container {
-    -webkit-animation: fadein 0.3s ease-out 1s backwards;
-    animation: fadein 0.3s ease-out 1s backwards;
-    position: relative;
-    right: 3.375em;
-    opacity: 1;
-    z-index: 200;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out; }
-    .site-header .header-navigation .menu-header-container ul {
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-      text-align: right;
-      line-height: 0; }
-      .site-header .header-navigation .menu-header-container ul li, .site-header .header-navigation .menu-header-container ul a {
-        line-height: 1;
-        margin: 0;
-        padding: 0; }
-      .site-header .header-navigation .menu-header-container ul li > ul {
-        display: none; }
-      .site-header .header-navigation .menu-header-container ul li {
-        display: inline-block;
-        position: relative;
-        padding: 0;
-        margin: 0 0.1975308642em; }
-        .site-header .header-navigation .menu-header-container ul li a {
-          padding: 0 0 1em 0.4444444444em; }
-    .sidebar-toggled .site-header .header-navigation .menu-header-container {
-      opacity: 0;
-      -webkit-transition-property: opacity;
-      transition-property: opacity;
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-in-out;
-      transition-timing-function: ease-in-out; }
-    .sidebar-closed .site-header .header-navigation .menu-header-container {
-      -webkit-animation: fadein 0.3s ease-out 0.5s backwards;
-      animation: fadein 0.3s ease-out 0.5s backwards; }
-    @media (max-width: 800px) {
-      .site-header .header-navigation .menu-header-container {
-        display: none; } }
-
-.sidebar .main-navigation {
-  padding-bottom: 2.25em;
+.main-navigation {
+  padding: 1.5em 0;
   margin-top: 0;
   font-family: "Roboto", sans-serif;
   font-size: 0.6666666667em;
@@ -894,23 +683,39 @@ a {
   letter-spacing: 0.1316872428em;
   text-transform: uppercase;
   font-weight: bold; }
-  .sidebar .main-navigation h2 {
+  .main-navigation h2 {
     display: none; }
-  .sidebar .main-navigation .sub-menu {
+  .main-navigation ul li {
+    display: block; }
+    @media (min-width: 480px) {
+      .main-navigation ul li {
+        display: inline-block;
+        line-height: 0; } }
+    @media (min-width: 1100px) {
+      .main-navigation ul li {
+        display: block; } }
+  .main-navigation .sub-menu {
     padding-left: 1em;
     border-left: 2px solid #ccced2; }
-    .sidebar .main-navigation .sub-menu a {
+    .main-navigation .sub-menu a {
       font-size: 1em;
       opacity: .6;
       padding: 1em 0; }
-      .sidebar .main-navigation .sub-menu a:hover {
+      .main-navigation .sub-menu a:hover {
         opacity: 1; }
-  .sidebar .main-navigation li {
+  .main-navigation li {
     padding: 0;
     margin: 0; }
-  .sidebar .main-navigation a {
+  .main-navigation a {
     display: block;
-    padding: 1.286em 0; }
+    line-height: 1.286em;
+    padding: 1.286em;
+    text-decoration: none; }
+    .main-navigation a:hover {
+      color: white; }
+
+.social-navigation {
+  display: none; }
 
 .comment-navigation .nav-previous a,
 .comment-navigation .nav-next a,
@@ -1066,9 +871,8 @@ blockquote.alignright {
       position: fixed;
       top: 0;
       left: 0;
-      padding: 1.5em;
-      margin: 1.5em 0;
-      text-align: left; } }
+      padding: 0 1.5em;
+      margin: 1.5em 0; } }
   @media (min-width: 1400px) {
     .site-header {
       margin: 2.25em 0;
@@ -1078,6 +882,7 @@ blockquote.alignright {
       width: 20vw; } }
 
 .site-branding {
+  padding: 1.5em 0;
   -webkit-animation: fadein 1s ease-out 0s backwards;
   animation: fadein 1s ease-out 0s backwards;
   color: #fff;
@@ -1116,7 +921,7 @@ blockquote.alignright {
   animation: fadein 2s ease-out backwards;
   position: relative;
   overflow: hidden;
-  background: #4d5462;
+  background: #333b4b;
   line-height: 0;
   margin-bottom: 2.25em; }
   .site-header-image img {
@@ -1169,7 +974,9 @@ blockquote.alignright {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: .15; }
+    opacity: .15;
+    -webkit-filter: blur(5px) grayscale(100%);
+            filter: blur(5px) grayscale(100%); }
 
 .site-content {
   width: 100vw; }
@@ -1323,7 +1130,8 @@ blockquote.alignright {
   float: left;
   margin: 0;
   border-width: 0;
-  background: rgba(77, 84, 98, 0.8);
+  overflow: hidden;
+  background: rgba(51, 59, 75, 0.8);
   -webkit-transition: background, 0.5s, ease-in-out;
   transition: background, 0.5s, ease-in-out; }
   .home article:nth-child(1) {
@@ -1366,7 +1174,7 @@ blockquote.alignright {
       width: 20vw;
       height: 20vw; } }
   .home article:nth-child(even) {
-    background: rgba(77, 84, 98, 0.6); }
+    background: rgba(51, 59, 75, 0.6); }
   .home article:hover {
     background-color: #50B496;
     -webkit-transition: background, 0.05s, ease-in-out;
@@ -1667,10 +1475,10 @@ blockquote.alignright {
     margin: 0;
     padding: 0;
     border-bottom: 0;
-    background: #4d5462;
+    background: #333b4b;
     overflow: hidden; }
     .error404 article:nth-child(even) {
-      background: rgba(77, 84, 98, 0.95); }
+      background: rgba(51, 59, 75, 0.95); }
     .error404 article .section-inner {
       position: absolute;
       top: 50%;
@@ -1796,7 +1604,6 @@ blockquote.alignright {
 ## Widgets
 --------------------------------------------------------------*/
 .widget {
-  display: none;
   margin: 0;
   padding: 2.25em 0;
   font-size: 0.8573333333em;

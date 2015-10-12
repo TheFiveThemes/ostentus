@@ -18,12 +18,12 @@ body {
 ::selection {/* WebKit/Blink Browsers */
 	background: $color__accent-tint10; 
 	color: $color__accent-tint90;
-	text-shadow: 0 1px 1px $color__accent-shade20;
+	text-shadow: 0 1px 1px $color__accent-mix20;
 }
 ::-moz-selection { /* Gecko Browsers */
 	background: $color__accent-tint10;
 	color: $color__accent-tint90;
-	text-shadow: 0 1px 1px $color__accent-shade20;
+	text-shadow: 0 1px 1px $color__accent-mix20;
 }
 
 body {
