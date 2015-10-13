@@ -3,7 +3,9 @@
     color: $color__text-footer;
 
     .home & {
-        background: $color__background-secondary;
+        @include respondTo(atleast-wide) {
+            background: $color__background-secondary;
+        }
     }
 
     .site-info {

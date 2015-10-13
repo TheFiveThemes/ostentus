@@ -1478,8 +1478,9 @@ blockquote.alignright {
 .site-footer {
   clear: both;
   color: rgba(255, 255, 255, 0.3); }
-  .home .site-footer {
-    background: rgba(0, 10, 30, 0.2); }
+  @media (min-width: 1100px) {
+    .home .site-footer {
+      background: rgba(0, 10, 30, 0.2); } }
   .site-footer .site-info {
     list-style: none;
     padding-top: 1.5em;
