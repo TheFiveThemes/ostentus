@@ -118,10 +118,8 @@
 .comment-form label {
     display: block;
     
-    @extend %heading-base;
-    font-size: ms(-2);
-    letter-spacing: ms(-12);
-    color: $color__text-softer;
+    @include text-format(heading-small);
+    color: $color__text-soft;
 
     padding: 0 0 ms(-4);
 }
