@@ -153,9 +153,44 @@
         }
     }
 
-    .posts-navigation {
-        padding: ms(0);
-        margin: ms(0) auto 0;
-        max-width: ms(18);
+    .posts-navigation .nav-previous,
+    .posts-navigation .nav-next {
+        @include animation(fadein 1s ease-out 0.37s backwards);
+        position: relative;
+        width: 50vw;
+        height: 50vw;
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: rgba($color__background-feature,.4);
+
+        a {
+            display: block;
+            padding: ms(2);
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 100%;
+            &:hover {
+                color: $color__link-secondary-hover;
+            }
+        }
+
+
+        @include respondTo(atleast-narrow) {
+            width: 33.333vw;
+            height: 33.333vw;
+        }
+
+        @include respondTo(atleast-medium) {
+            width: 25vw;
+            height: 25vw;
+        }
+
+        @include respondTo(atleast-ultra-wide) {
+            width: 20vw;
+            height: 20vw;
+        }
     }
 }

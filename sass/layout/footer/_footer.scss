@@ -1,0 +1,31 @@
+.site-footer {
+    clear: both;
+    color: $color__text-footer;
+
+    .home & {
+        background: $color__background-secondary;
+    }
+
+    .site-info {
+        list-style: none;
+        padding-top: ms(2);
+        padding-bottom: ms(2);
+        margin-bottom: ms(0);
+        li {
+            display: block;
+            text-transform: uppercase;
+            font-size: ms(-3);
+            letter-spacing: ms(-15);
+            margin: 0;
+        }
+    }
+    a {
+        display: inline-block;
+        padding: ms(-2) ms(-2) ms(-2) 0px;
+        color: $color__link-footer;
+        text-decoration: none;
+        &:hover {
+            color: $color__link-footer-hover;
+        }            
+    }
+}

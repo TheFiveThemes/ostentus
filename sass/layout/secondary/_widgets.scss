@@ -1,0 +1,47 @@
+.widget {
+    width: 100%;
+    margin: 0;
+    padding: ms(2) 0;
+    font-size: ms(-1);
+    color: $color__text-secondary;
+
+    @include respondTo(atleast-medium) {
+        width: 50%;
+        float: left;
+        padding: ms(2) ms(2) ms(2) 0;
+
+        &:nth-child(even) {
+            float: right;
+            padding: ms(2) 0 ms(2) ms(2);
+        }
+    }
+
+	/* Make sure select elements fit in widgets. */
+	select, input {
+		max-width: 100%;
+	}
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a:hover {
+        color: $color__link-secondary-hover;
+    }
+
+    @include respondTo(upto-narrow) {
+        padding: ms(2) 0;
+    }
+}
+
+/* Search widget. */
+.widget_search {
+    .search-field {
+        width: 100%;
+    }
+    .search-submit {
+	   display: none;
+    }
+}

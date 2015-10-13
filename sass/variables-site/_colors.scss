@@ -44,7 +44,8 @@ $color__background-hr: $color__base-tint95;
 $color__background-pre: $color__base-tint95;
 $color__background-ins: #fff9c0;
 
-$color__background-content: #fff;
+$color__background-primary: #fff;
+$color__background-secondary: rgba($color__base,.2);
 $color__background-archive-header: $color__base-tint90;
 $color__background-homeblock-hover: $color__accent;
 $color__background-feature: $color__base-tint20;
@@ -66,18 +67,18 @@ $color__headings: $color__base-tint20;
 $color__text-soft: $color__base-tint60;
 $color__text-softer: $color__base-tint80;
 
-$color__text-sidebar: $color__base-tint40;
-$color__text-shadow-sidebar: $color__base-tint95;
+$color__text-secondary: rgba(#fff,.5);
+
+$color__text-footer: rgba(#fff,.3);
 
 
 // Links
 
 $color__link: $color__accent;
 $color__link-visited: $color__accent-tint10;
-$color__link-hover: $color__base-tint20;
+$color__link-hover: $color__base;
 
-$color__link-sidebar: $color__base-tint40;
-$color__link-sidebar-hover: $color__accent;
+$color__link-secondary-hover: rgba(#fff,.8);
 
 $color__titlelink: $color__base-tint20;
 $color__titlelink-hover: $color__accent;
@@ -94,8 +95,8 @@ $color__headerlink-toggle-open-hover: $color__accent;
 $color__headernavlink: rgba($color__base-tint90,.7);
 $color__headernavlink-hover: #fff;
 
-$color__footerlink: $color__base-tint70;
-$color__footerlink-hover: $color__accent;
+$color__link-footer: rgba(#fff,.3);
+$color__link-footer-hover: $color__accent;
 
 
 // Forms
@@ -121,5 +122,6 @@ $color__border-abbr: $color__base-tint60;
 
 // Others
 $color__border-base: $color__base-tint95;
+$color__border-secondary: rgba($color__base,.3);
 $color__border-sidebar-navigation: $color__base-tint80;
-$color__boxshadow-content: $color__base-tint40;
+$color__boxshadow-primary: $color__base-tint40;

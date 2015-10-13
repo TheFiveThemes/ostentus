@@ -1,0 +1,22 @@
+.widget-area {
+    overflow: hidden;
+    
+    @include respondTo(atleast-wide) {
+        padding-top: ms(2);
+        padding-bottom: ms(2);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    @include respondTo(atleast-extra-wide) {
+        padding-top: ms(2);
+        padding-bottom: ms(2);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/*--------------------------------------------------------------
+## Widgets
+--------------------------------------------------------------*/
+@import "widgets";

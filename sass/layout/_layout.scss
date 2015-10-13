@@ -25,7 +25,8 @@
     }
 }
 
-.site-content {
+.site-content,
+.site-footer {
     width: 100vw;
     @include respondTo(atleast-narrow) {
         width: 90vw;
@@ -41,30 +42,26 @@
     }
 }
 
-.content-area {
+.content-area, 
+.widget-area,
+.site-info {
     max-width: ms(18);
     padding: ms(2);
     margin: 0 auto;
-    background: $color__background-content;
-    box-shadow: 0 2px 1px rgba($color__boxshadow-content,.3);
     
     @include respondTo(atleast-wide) {
         padding: ms(6);
         margin: ms(2) ms(2) ms(8) 0;
     }
     @include respondTo(atleast-extra-wide) {
-        margin-top: ms(4);
-        margin-right: ms(4);
+        font-size: ms(1);
         padding: ms(8);
     }
-    
-    .site-main {
-        
-    }
+}
 
-    @include respondTo(atleast-extra-wide) {
-        font-size: ms(1);
-    }
+.content-area {
+    background: $color__background-primary;
+    box-shadow: 0 2px 1px rgba($color__boxshadow-primary,.3);
 }
 
 /*--------------------------------------------------------------

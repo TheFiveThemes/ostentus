@@ -102,12 +102,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "site/site";
+@import "layout/layout";
 
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-@import "site/sidebar/sidebar";
+@import "layout/secondary/secondary";
 
 /*--------------------------------------------------------------
 # Infinite scroll
